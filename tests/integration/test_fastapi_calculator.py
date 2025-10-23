@@ -43,7 +43,7 @@ def test_add_api(client):
     response = client.post('/add', json={'a': 10, 'b':5})
 
     #assert that the response status code is 200(OK)
-    assert response.status_code == 20, f"Expected status code 200, got {response.status_code}"
+    assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
 
     #assert that the JSON response contains the correct 'result' value
     assert response.json()['result'] == 15, f"Expected result 15, got {response.json()['result']}"
